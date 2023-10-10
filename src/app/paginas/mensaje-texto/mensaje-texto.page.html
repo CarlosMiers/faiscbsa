@@ -1,0 +1,24 @@
+<ion-header style="background-color: rgba(35, 224, 200, 1)">
+  <ion-toolbar class="barra" color="primary">
+    <div class="ion-text-center">
+      <h4>Contacte a su Asesor</h4>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Mensaje</ion-label>
+  </ion-item>
+  <ion-item>
+   
+    <ion-textarea
+    placeholder="Escriba su mensaje aquí"
+    [autoGrow]="true"
+    [(ngModel)]="mensaje"
+  >
+  </ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block"  (click)="send()">Envíar Mensaje</ion-button>  
+</ion-content>

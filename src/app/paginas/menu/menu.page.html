@@ -1,0 +1,122 @@
+<ion-header style="background-color: rgba(35, 224, 200, 1)">
+  <ion-toolbar class="barra" color="primary">
+    <div class="ion-text-center">
+      <h4>Menú</h4>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-accordion-group expand="inset">
+    <ion-accordion value="first">
+      <ion-item slot="header">
+        <ion-label>Cartera de Inversiones</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content" [routerLink]="['/cartera-renta-fija-moneda',1]">
+        Renta Fija en Guaraníes
+      </div>
+      <div class="ion-padding" slot="content" [routerLink]="['/cartera-renta-fija-moneda',2]">
+        Renta Fija en USD
+      </div>
+      <div class="ion-padding" slot="content" [routerLink]="['/cartera-acciones',1]">
+        Renta Variable en Guaraníes
+      </div>
+      <div class="ion-padding" slot="content" [routerLink]="['/cartera-acciones',2]">
+        Renta Variable en USD
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Detalle de Vencimientos</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content" [routerLink]="['/vencimiento-cartera',1]">
+        Vencimientos en Guaraníes
+      </div>
+      <div class="ion-padding" slot="content" [routerLink]="['/vencimiento-cartera',2]">
+        Vencimientos en USD
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Opciones de Inversión</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content" [routerLink]="['/renta-fija']">
+        Renta Fija
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="four">
+      <ion-item slot="header" color="light">
+        <ion-label>Ordenes de Operación</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Compras
+      </div>
+      <div class="ion-padding" slot="content">
+        Ventas
+      </div>
+    </ion-accordion>
+
+
+    <ion-accordion value="five">
+      <ion-item slot="header" color="light">
+        <ion-label>Contacte con su Asesor</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content" [routerLink]="['/mensaje-texto']">
+        Enviar Mensaje de Texto
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <div>
+    <ion-card>
+      <ion-card-content>
+        <ion-slides [options]="slideOpts">
+          <ion-slide  [routerLink]="['/page1']" >
+            <img src="../../../assets/img/card1.jpg" alt=”slide-1”/>
+            <div class="centrado" style="color: black;"  [routerLink]="['/page1']" >Intermediación Bursátil</div>
+          </ion-slide>
+          <ion-slide [routerLink]="['/page2']">
+            <img src="../../../assets/img/card2.jpg" alt=”slide-2”  />
+            <div class="centrado" style="color: white;"  [routerLink]="['/page2']" >Asesoría Financiera</div>
+          </ion-slide>
+          <ion-slide [routerLink]="['/page3']">
+            <img src="../../../assets/img/card3.jpg" alt=”slide-3”  />
+            <div class="centrado" style="color:black;"  [routerLink]="['/page3']" >Agentes de Emisión</div>
+          </ion-slide>
+          <ion-slide [routerLink]="['/page4']" >
+            <img src="../../../assets/img/card4.jpg" alt=”slide-4” />
+            <div class="centrado" style="color: white;"  [routerLink]="['/page4']" >Estructuras Financieras</div>
+          </ion-slide>
+        </ion-slides>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-icon name="globe" onclick="window.open('https://www.fais.com.py/','_system','location=yes')"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-icon name="logo-facebook" onclick="window.open('https://www.facebook.com/Faiscbsa/','_system','location=yes')"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-icon name="logo-instagram"  onclick="window.open('https://instragram.com/faiscbsa?igshid=NTc4MTIwNjQ2YQ==','_system','location=yes')"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-icon name="logo-twitter" onclick="window.open('https://twitter.com/faiscbsa?lang=es','_system','location=yes')"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

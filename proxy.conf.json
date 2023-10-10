@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "http://faiscbsa.com.py/",
+        "secure": false,
+        "logLavel":"debug",
+        "changeOrigin":true
+    }
+}

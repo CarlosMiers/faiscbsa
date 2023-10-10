@@ -1,0 +1,38 @@
+ion-footer {
+  background: linear-gradient(180deg, rgba(35, 224, 200, 1) 0%, rgba(73, 180, 181, 1) 100%);
+}
+
+.contenido{
+  position: relative;
+  top: -20px;
+}
+
+ion-card {
+  //background-color:   rgb(213, 252, 247) ; // black
+  background-color:  rgba(35, 224, 200, 1);
+  height: 140px;
+  margin-top: 0%;
+}
+
+ion-card-subtitle {
+  font-size: 20px;
+  color: black;
+}
+
+ion-row {
+  margin-top: 1px;
+  top: 1px;
+  height: 20px;
+}
+
+ion-col {
+  font-size: 15px;
+  font-style: normal;
+  color: black;
+}
+
+ion-icon {
+  font-size: 20px;
+  color: white;
+  --ionicon-stroke-width: 16px;
+}

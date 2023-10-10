@@ -1,0 +1,8 @@
+{
+  "name": "Fais CBSA",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,43 @@
+.logo {
+    width: 60%;
+    margin: 20% 0 20% 0;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.title p {
+    margin-top: 0 !important;
+}
+
+
+ion-content {
+    --background:#58c4b3;
+    //--background: linear-gradient(#b8dfd9, #f4f5f8);
+}
+
+ion-button {
+    color: black;
+    font-style: normal;
+}
+
+
+
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}

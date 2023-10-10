@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar color="primary"  >
+    <ion-title class="ion-text-center">Ofertas de Inversión</ion-title>
+  </ion-toolbar>
+  <ion-toolbar >
+    <ion-searchbar (ionChange)="buscar($event)"> </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let detalle of OfertaReporte | filtro:textoBuscar:'nombreemisor'" (click)="presentActionSheet(detalle.id)">
+      <ion-card>
+        <ion-card-subtitle>{{detalle.nombreemisor}}</ion-card-subtitle>
+        <div class="contenido">
+          <ion-grid>
+            <ion-row>
+              <ion-col class="ion-margin">
+                <div><strong>Título</strong></div>
+              </ion-col>
+              <ion-col class="ion-margin">
+                <div>{{detalle.nombretitulo}}</div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="ion-margin">
+                <div><strong>Valor Nominal</strong></div>
+              </ion-col>
+              <ion-col class="ion-margin">
+                <div>{{detalle.valor_inversion | number:'1.0-0'}}</div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="ion-margin">
+                <div><strong>Tasa</strong></div>
+              </ion-col>
+              <ion-col class="ion-margin">
+                <div>{{detalle.tasa |  number:'1.1-3'}}</div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="ion-margin">
+                <div><strong>Moneda</strong></div>
+              </ion-col>
+              <ion-col class="ion-margin">
+                <div>{{detalle.nombremoneda}}</div>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+        </div>
+      </ion-card>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-icon name="globe" onclick="window.open('https://www.fais.com.py/','_system','location=yes')"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-icon name="logo-facebook" onclick="window.open('https://www.facebook.com/Faiscbsa/','_system','location=yes')"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-icon name="logo-instagram"  onclick="window.open('https://instragram.com/faiscbsa?igshid=NTc4MTIwNjQ2YQ==','_system','location=yes')"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-icon name="logo-twitter" onclick="window.open('https://twitter.com/faiscbsa?lang=es','_system','location=yes')"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
